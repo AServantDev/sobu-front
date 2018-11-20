@@ -1,0 +1,41 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<img
+  [src]="'assets/images/district.png'"
+  alt=""
+  class="mx-auto col-sm row align-items-center w-50"
+/>
+
+<nav
+  class="border-dark border-top border-bottom w-50  mx-auto align-self-center wrap-header navbar navbar-light navbar-expand-lg mb-3" id="mainNav"
+>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class=" collapse navbar-collapse nav navbar-nav "
+    id="navbarNavAltMarkup"
+  >
+    <div class=" navbar-nav  container-fluid d-flex justify-content-center">
+      <a class="nav-item nav-link" href="./connection.component.html">ACCUEIL</a>
+
+      <a class="nav-item nav-link" href="#">MON PROFIL</a>
+
+      <a class="nav-item nav-link" href="#">LES PROGRAMMES</a>
+
+      <a class="nav-item nav-link" href="#">LE DISTRICT</a>
+    </div>
+  </div>
+</nav>
+
+<app-inscription></app-inscription>
+
+
+<router-outlet></router-outlet>

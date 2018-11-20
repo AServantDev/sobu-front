@@ -1,0 +1,19 @@
+export class User {
+  idUser: number;
+  name: string;
+  lastname: string;
+  age: number;
+  heigth: number;
+  weight: number;
+
+  email: string;
+
+  password: string;
+  kcalPerDay: number;
+  protPerDay: number;
+  fatsPerDay: number;
+  carbsPerDays: number;
+  gender: string;
+  coefSportif: number;
+
+}

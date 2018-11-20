@@ -1,0 +1,22 @@
+*{
+    font-family:'Arial, Helvetica, sans-serif',serif;
+    font-weight: bolder;
+}
+
+nav div div a, form div label {
+    font-size: 1vw;
+
+   
+    color: black;
+}
+nav div div a:hover {
+    color: #D00000;
+}
+
+#navHead *::before, #navHead *::after {
+	content: none;
+}
+
+input, select{
+    border-color: #D00000;
+}
