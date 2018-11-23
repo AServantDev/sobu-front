@@ -1,4 +1,4 @@
-<h3 class="row justify-content-center mb-5">INSCRIPTION</h3>
+<h3 class="row justify-content-center mb-3 font-weight-bold">INSCRIPTION</h3>
 
 <form class="mr-5 ml-5 ">
   <div class="form-group row">
@@ -77,7 +77,7 @@
         type="number"
         class="form-control"
         id="inputTaille"
-        placeholder="Taille (en cm)"
+        placeholder="Taille (en mètres)"
         [(ngModel)]="user.heigth"
         name="heigth"
       />
@@ -124,7 +124,8 @@
       </select>
     </div>
   </div>
-  <button class="row justify-content-center" type="button" (click)="newUser()">
+  <div class="row justify-content-center mb-3"><button class=" btn btn-link" type="button" (click)="newUser()">
     Sign In!
-  </button>
+  </button></div>
 </form>
+<div class="row justify-content-center">Déja inscrit? <a routerLink="/connexion"> Clique ici</a></div>

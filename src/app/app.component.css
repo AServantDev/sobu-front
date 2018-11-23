@@ -4,9 +4,7 @@
 }
 
 nav div div a, form div label {
-    font-size: 1vw;
-
-   
+    font-size: 0.9em; 
     color: black;
 }
 nav div div a:hover {
@@ -14,9 +12,7 @@ nav div div a:hover {
 }
 
 #navHead *::before, #navHead *::after {
-	content: none;
+	width: 100%;
 }
 
-input, select{
-    border-color: #D00000;
-}
+

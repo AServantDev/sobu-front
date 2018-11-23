@@ -1,13 +1,11 @@
-input, select{
-    border-color: #D00000;
-}
-label {
-    font-size: 1rem;
-}
 button:hover, button{
     border-color: #D00000;
     background-color: white;
     color: black;
     font-weight: bolder;
 
+}
+
+img{
+    width: 200px;
 }

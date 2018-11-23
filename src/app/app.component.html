@@ -1,41 +1,46 @@
 <!-- The content below is only a placeholder and can be replaced. -->
-<img
-  [src]="'assets/images/district.png'"
-  alt=""
-  class="mx-auto col-sm row align-items-center w-50"
-/>
+<div class="container">
+  <img
+    [src]="'assets/images/district.png'"
+    alt=""
+    class=" img-fluid mx-auto  row align-items-center mb-3 w-50"
+  />
 
-<nav
-  class="border-dark border-top border-bottom w-50  mx-auto align-self-center wrap-header navbar navbar-light navbar-expand-lg mb-3" id="mainNav"
->
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
+  <nav
+    class="border-dark border-top border-bottom w-100  mx-auto align-self-center wrap-header navbar navbar-light navbar-expand-lg mb-3"
+    id="mainNav"
   >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    class=" collapse navbar-collapse nav navbar-nav "
-    id="navbarNavAltMarkup"
-  >
-    <div class=" navbar-nav  container-fluid d-flex justify-content-center">
-      <a class="nav-item nav-link" href="./connection.component.html">ACCUEIL</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class=" collapse navbar-collapse nav navbar-nav "
+      id="navbarNavAltMarkup"
+    >
+      <div
+        id="navHead"
+        class=" navbar-nav w-75 container-fluid d-flex justify-content-center"
+      >
+        <a class="nav-item nav-link" routerLink="/home">ACCUEIL</a>
 
-      <a class="nav-item nav-link" href="#">MON PROFIL</a>
+        <a class="nav-item nav-link" routerLink="/profil">MON PROFIL</a>
 
-      <a class="nav-item nav-link" href="#">LES PROGRAMMES</a>
+        <a class="nav-item nav-link" routerLink="/programs">LES PROGRAMMES</a>
 
-      <a class="nav-item nav-link" href="#">LE DISTRICT</a>
+        <a class="nav-item nav-link" routerLink="/inscription"
+          >S'INSCRIRE / SE CONNECTER</a
+        >
+      </div>
     </div>
-  </div>
-</nav>
-
-<app-inscription></app-inscription>
-
+  </nav>
+</div>
 
 <router-outlet></router-outlet>

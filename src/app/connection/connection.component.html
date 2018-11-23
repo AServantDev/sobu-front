@@ -1,4 +1,4 @@
-<h3 class="row justify-content-center mb-5">CONNEXION</h3>
+<h3 class="row justify-content-center mb-5 font-weight-bold">CONNEXION</h3>
 
 <form class="mr-5 ml-5 ">
   <div class="form-group row">
@@ -29,11 +29,16 @@
       />
     </div>
   </div>
-  <button
-    class="row justify-content-center"
-    type="button"
-    (click)="connectUser()"
-  >
-    Log In!
-  </button>
+  <div class="row justify-content-center mb-3">
+    <button
+      class="row justify-content-center btn btn-link"
+      type="button"
+      (click)="connectUser()"
+    >
+      Log In!
+    </button>
+  </div>
 </form>
+<div class="row justify-content-center">
+  Pas encore inscrit? <a routerLink="/inscription"> Clique ici</a>
+</div>
