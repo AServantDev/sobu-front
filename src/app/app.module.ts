@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule,  HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppRoutingModule } from './core/app-routing.module';
 import { AppComponent } from './app.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnectionComponent } from './connection/connection.component';
@@ -13,6 +11,13 @@ import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { WarningComponent } from './warning/warning.component';
 import { ProgramScreenComponent } from './program-screen/program-screen.component';
+import { FoodListComponent } from './food-list/food-list.component';
+import { ErrorDialogComponent } from './core/error-dialog.component';
+import { AuthService } from './core/auth.service';
+import { TokenStorage } from './core/token.storage';
+import { Interceptor } from './core/inteceptor';
+import {CustomMaterialModule} from './core/material.module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { ProgramScreenComponent } from './program-screen/program-screen.componen
     HomeComponent,
     ProfilComponent,
     WarningComponent,
-    ProgramScreenComponent
+    ProgramScreenComponent,
+    FoodListComponent
     
     
   ],
@@ -31,9 +37,14 @@ import { ProgramScreenComponent } from './program-screen/program-screen.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CustomMaterialModule
   ],
-  providers: [],
+  providers: [ErrorDialogComponent, AuthService, TokenStorage, TokenStorage,
+    {provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi : true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

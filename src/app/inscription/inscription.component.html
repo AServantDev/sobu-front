@@ -28,6 +28,19 @@
     </div>
   </div>
   <div class="form-group row">
+    <label for="inputFirstname" class="col-sm-2 col-form-label">Pseudo:</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="inputUsername"
+        placeholder="Pseudo"
+        [(ngModel)]="user.username"
+        name="username"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
     <label for="exampleFormControlInput1 " class="col-sm-2 col-form-label"
       >Email:</label
     >

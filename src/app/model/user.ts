@@ -15,5 +15,6 @@ export class User {
   carbsPerDays: number;
   gender: string;
   coefSportif: number;
+  username: string;
 
 }
