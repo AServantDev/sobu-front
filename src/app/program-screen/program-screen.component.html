@@ -1,5 +1,7 @@
 <h3 class="row justify-content-center mb-3 font-weight-bold">LES PROGRAMMES</h3>
-<h4 class="row justify-content-center mb-5 font-weight-bold">Bonjour {{user.name}} choisi le programme qui t'intéresse</h4>
+<h4 class="row justify-content-center mb-5 font-weight-bold">
+  Bonjour {{ user.name }} choisi le programme qui t'intéresse
+</h4>
 
 <div class="accordion container mb-3" id="accordionExample">
   <div class="card card-border-danger">
@@ -37,6 +39,8 @@
       </div>
       <div class="row justify-content-center mb-2">
         <button
+          (click)="subscribe()"
+          value="build"
           class="row justify-content-center btn btn-link"
           type="button"
           routerLink=""
@@ -80,6 +84,8 @@
       </div>
       <div class="row justify-content-center mb-2">
         <button
+          (click)="subscribe()"
+          value="shred"
           class="row justify-content-center btn btn-link"
           type="button"
           routerLink=""
@@ -123,6 +129,8 @@
       </div>
       <div class="row justify-content-center mb-2">
         <button
+          (click)="(subscribe)"
+          value="ceto"
           class="row justify-content-center btn btn-link"
           type="button"
           routerLink=""
@@ -166,6 +174,8 @@
       </div>
       <div class="row justify-content-center mb-2">
         <button
+          (click)="(subscribe)"
+          value="paleo"
           class="row justify-content-center btn btn-link"
           type="button"
           routerLink=""

@@ -35,7 +35,10 @@ export class ConnectionComponent  {
     this.authService.attemptAuth(this.username, this.password).subscribe(
       data => {
         this.token.saveToken(data.token);
-        console.log(this.token.getToken());
+        localStorage.setItem('currentUser', JSON.stringify({ token: this.token, username: this.username }));
+        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        var token = currentUser.token;
+        console.log(currentUser.username);
         this.router.navigate(['profil']);
       }
     );

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Renderer2 } from "@angular/core";
 import { Food } from "../model/food";
 import { DataserviceService } from "../services/dataservice.service";
 
@@ -11,7 +11,10 @@ export class FoodListComponent implements OnInit {
   foods: Food[];
   food = new Food();
 
-  constructor(private dataService: DataserviceService) {}
+  constructor(private dataService: DataserviceService, private renderer: Renderer2) {
+    renderer.listen('document', 'submit', () => this.getFoods());
+  }
+  
 
   ngOnInit() {
     this.getFoods();

@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { User } from '../model/user';
 import { TokenStorage } from '../core/token.storage';
 import { Food } from '../model/food';
+import { ShredProgram } from '../model/shredProgram';
+import { BuildProgram } from '../model/buildProgram';
 
 
 @Injectable({
@@ -45,6 +47,9 @@ public getUsers(): Observable<User[]> {
 public getUser(id: number): Observable<User> {
   return this.httpClient.get<User>(`http://localhost:8080/api/user/getUser/` + id);
 }
+public getUserByUsername(username: string): Observable<User> {
+  return this.httpClient.get<User>(`http://localhost:8080/api/user/getUserByUsername/`+ username);
+}
 public logOut(): void{
   this.token.signOut();
 }
@@ -54,5 +59,16 @@ public getFoods(): Observable<Food[]>{
 public createNewFood(newFood: Food): Observable<Food>{
   return this.httpClient.post<Food>('http://localhost:8080/api/food/newFood', newFood);
 }
+
+public subscribeShred(idUser: number, newShred: ShredProgram): Observable<ShredProgram>{
+  return this.httpClient.post<ShredProgram>(`http://localhost:8080/api/program/newShred/` + idUser, newShred) ;
+}
+
+public subscribeBuild(idUser: number, newBuild: BuildProgram): Observable<BuildProgram>{
+  return this.httpClient.post<BuildProgram>(`http://localhost:8080/api/program/newBuild/` + idUser, newBuild) ;
+}
+
+
+
 }
 

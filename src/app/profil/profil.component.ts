@@ -15,21 +15,29 @@ export class ProfilComponent implements OnInit {
   
   user : User; 
   
+  
   displayedColumns = ['username', 'kcalPerDay', 'carbsPerDays', 'heigth', 'weight', 'fatsPerDay', 'protPerDay'];
   dataSource = new MatTableDataSource<User>();
   constructor(private route: ActivatedRoute, private router: Router, private dataService: DataserviceService, private token : TokenStorage) {
   }
   ngOnInit(): void {
-   this.getUser();
+  this.getUser();
    
-   console.log(this.token.getToken());
-  }
+   
+  //  this.dataService.getUsers().subscribe(
+  //   data => {
+  //     this.dataSource.data = data;
+  //   }
+  // );
+     }
 
+     
 
   getUser(): void {
-    const id = 3;
-    console.log(id);
-    this.dataService.getUser(id).subscribe(user => this.user = user);
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const username = currentUser.username;
+    console.log(username);
+    this.dataService.getUserByUsername(username).subscribe(user => this.user = user);
   }
 
 
