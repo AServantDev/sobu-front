@@ -31,14 +31,14 @@ export class ConnectionComponent  {
   
 
   login(): void {
-    console.log(this.username, this.password);
+    
     this.authService.attemptAuth(this.username, this.password).subscribe(
       data => {
         this.token.saveToken(data.token);
         localStorage.setItem('currentUser', JSON.stringify({ token: this.token, username: this.username }));
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         var token = currentUser.token;
-        console.log(currentUser.username);
+        console.log(token.toString());
         this.router.navigate(['profil']);
       }
     );

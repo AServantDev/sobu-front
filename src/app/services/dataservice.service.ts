@@ -56,6 +56,9 @@ public logOut(): void{
 public getFoods(): Observable<Food[]>{
   return this.httpClient.get<Food[]>('http://localhost:8080/api/food/allFood');
 }
+public getFood(id: number): Observable<Food>{
+  return this.httpClient.get<Food>('http://localhost:8080/api/food/getFood/' +id);
+}
 public createNewFood(newFood: Food): Observable<Food>{
   return this.httpClient.post<Food>('http://localhost:8080/api/food/newFood', newFood);
 }
@@ -63,9 +66,15 @@ public createNewFood(newFood: Food): Observable<Food>{
 public subscribeShred(idUser: number, newShred: ShredProgram): Observable<ShredProgram>{
   return this.httpClient.post<ShredProgram>(`http://localhost:8080/api/program/newShred/` + idUser, newShred) ;
 }
+public getShred(idShred: number): Observable<ShredProgram>{
+  return this.httpClient.get<ShredProgram>(`http://localhost:8080/api/program/getShred/` + idShred);
+}
 
 public subscribeBuild(idUser: number, newBuild: BuildProgram): Observable<BuildProgram>{
   return this.httpClient.post<BuildProgram>(`http://localhost:8080/api/program/newBuild/` + idUser, newBuild) ;
+}
+public getBuild(idBuild: number): Observable<BuildProgram>{
+  return this.httpClient.get<BuildProgram>(`http://localhost:8080/api/program/getBuild/` + idBuild);
 }
 
 

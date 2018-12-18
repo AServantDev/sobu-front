@@ -7,6 +7,8 @@ import { WarningComponent } from "../warning/warning.component";
 import { ProgramScreenComponent } from "../program-screen/program-screen.component";
 import { ProfilComponent } from "../profil/profil.component";
 import { FoodListComponent } from "../food-list/food-list.component";
+import { FoodDetailComponent } from "../food-detail/food-detail.component";
+import { DetailProgramComponent } from "../detail-program/detail-program.component";
 
 const routes: Routes = [
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: "food",
     component: FoodListComponent
+  },
+  {
+    path: "detail/:idFood",
+    component: FoodDetailComponent
+  },
+  {
+    path: "detailProgram/:shred",
+    component: DetailProgramComponent
   },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   {

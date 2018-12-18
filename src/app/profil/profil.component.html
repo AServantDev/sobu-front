@@ -33,6 +33,22 @@
     <div class="">{{ user.heigth }} mêtres</div>
   </div>
 </div>
-<div *ngIf="shred">
-  
+
+<h4 class="row justify-content-center mb-5 font-weight-bold">
+  Tes programmes:
+</h4>
+
+<div class="container w-75 ">
+<ul >
+<li *ngIf="user.shred"><a href="detailProgram/{{user.shred.idShred}}">Ma sèche.</a>
+</li>
+<li *ngIf="user.build"><a href="detailProgram/{{user.build.idBuild}}">Ma prise de masse.</a></li>
+
+</ul>
+
 </div>
+
+
+
+
+

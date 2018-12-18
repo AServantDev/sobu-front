@@ -41,11 +41,11 @@ export class ProgramScreenComponent implements OnInit {
   }
 
   subscribeShred(){
-    this.dataService.subscribeShred(1, this.shred).subscribe(newShred => console.log(newShred))
+    this.dataService.subscribeShred(this.user.id, this.shred).subscribe(newShred => console.log(newShred))
   }
 
   subscribeBuild(){
-    this.dataService.subscribeBuild(1, this.build).subscribe(newBuild => console.log(newBuild))
+    this.dataService.subscribeBuild(this.user.id, this.build).subscribe(newBuild => console.log(newBuild))
   }
 
 }

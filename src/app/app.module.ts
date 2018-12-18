@@ -17,6 +17,8 @@ import { AuthService } from './core/auth.service';
 import { TokenStorage } from './core/token.storage';
 import { Interceptor } from './core/inteceptor';
 import {CustomMaterialModule} from './core/material.module';
+import { FoodDetailComponent } from './food-detail/food-detail.component';
+import { DetailProgramComponent } from './detail-program/detail-program.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import {CustomMaterialModule} from './core/material.module';
     ProfilComponent,
     WarningComponent,
     ProgramScreenComponent,
-    FoodListComponent
+    FoodListComponent,
+    FoodDetailComponent,
+    DetailProgramComponent
     
     
   ],

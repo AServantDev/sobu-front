@@ -4,10 +4,8 @@ import { User } from "./user";
 export class ShredProgram extends Program {
   idShred: number;
 
-  // @JsonIgnore
-  // @OneToOne
-  // User shredUser;
-  shredUser: User;
+  shredUser: number;
 
   actualWeight: number;
+  
 }
